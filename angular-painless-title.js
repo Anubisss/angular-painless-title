@@ -48,7 +48,7 @@ angularPainlessTitleModule.provider('painlessTitle', [function() {
     var titleChanger = {
       setTitle: function(title) {
         // Merges the complete title then sets it.
-        $rootScope.page.setTitle(title !== undefined ?
+        $rootScope.page.setTitle(title ? // truthy check
                                  title + ' ' + titleSeparator + ' ' + titleSuffix :
                                  titleSuffix);
       }
