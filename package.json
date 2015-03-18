@@ -1,6 +1,6 @@
 {
   "name": "angular-painless-title",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple and easy to use (painless) module to manipulate titles in angular apps.",
   "main": "angular-painless-title.js",
   "scripts": {
