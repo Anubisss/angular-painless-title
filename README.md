@@ -77,9 +77,9 @@ If you don't set a title you will have just the title suffix as a complete title
 
 ## Demo
 
-* Preview: http://plnkr.co/z96mQJ Just don't forget to run the demo in fullscreen (separate window) to see title changes.
-* Source: http://plnkr.co/edit/z96mQJ
-* Fullscreen version: http://run.plnkr.co/plunks/z96mQJ/#/
+* [Preview](http://plnkr.co/z96mQJ), just don't forget to run the demo in fullscreen (separate window) to see title changes.
+* [Source](http://plnkr.co/edit/z96mQJ)
+* [Fullscreen version](http://run.plnkr.co/plunks/z96mQJ/#/)
 
 ## License
 
