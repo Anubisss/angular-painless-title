@@ -2,6 +2,8 @@
 
 painlessTitle is an [angular](https://angularjs.org/) module to manipulate titles in angular apps with a simple and easy (painless) way.
 
+[![NPM](https://nodei.co/npm/angular-painless-title.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/angular-painless-title)
+
 ## Install
 
 * directly from the git repository: ```git clone https://github.com/Anubisss/angular-painless-title ```
@@ -23,6 +25,10 @@ Include the script and you have to set up the ng-app at the html element, then y
   <script src="scripts/app.js"></script>
   <script src="scripts/controllers/home.js"></script>
 </head>
+<body>
+  <div ng-view></div>
+</body>
+</html>
 ```
 
 Inject the module then config it and bootstrap (instantiate) the painlessTitle factory.
@@ -61,10 +67,19 @@ $routeProvider
     templateUrl: 'views/about.html',
     title: 'About' // complete title: About | My Site
   })
+  .when('/no_title', {
+    templateUrl: 'views/no_title.html' // no controller, no title from the router, so complete title: My Site
+  })
 ;
 ```
 
 If you don't set a title you will have just the title suffix as a complete title, eg.: My Site
+
+## Demo
+
+* Preview: http://plnkr.co/z96mQJ Just don't forget to run the demo in fullscreen (separate window) to see title changes.
+* Source: http://plnkr.co/edit/z96mQJ
+* Fullscreen version: http://run.plnkr.co/plunks/z96mQJ/#/
 
 ## License
 
