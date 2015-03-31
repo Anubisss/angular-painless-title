@@ -31,11 +31,13 @@ angularPainlessTitleModule.provider('painlessTitle', [function() {
 
   this.$get = ['$rootScope', function($rootScope) {
 
-    // Sets the complete (merged) title.
+    // Sets the complete (merged) and the head title.
     // You can use this title like this: <title ng-bind="page.title">HTML title</title>
+    // and the head eg.: <h3 ng-bind="page.headTitle"></h3>
     $rootScope.page = {
-      setTitle: function(title) {
-        this.title = title;
+      setTitle: function(headTitle, completeTitle) {
+        this.title = completeTitle;
+        this.headTitle = headTitle;
       }
     };
 
@@ -48,7 +50,8 @@ angularPainlessTitleModule.provider('painlessTitle', [function() {
     var titleChanger = {
       setTitle: function(title) {
         // Merges the complete title then sets it.
-        $rootScope.page.setTitle(title ? // truthy check
+        $rootScope.page.setTitle(title ? title : titleSuffix,
+                                 title ? // truthy check
                                  title + ' ' + titleSeparator + ' ' + titleSuffix :
                                  titleSuffix);
       }
